@@ -1,0 +1,14 @@
+{
+    "routes": [
+        {
+            "src": "/1574524831:AAEcjMbq_hKCyVlJtY9Qd4I29Wq0WLBOUSw",
+            "dest": "/api/ttoy.go"
+        }
+    ],
+
+    "build": {
+        "env": {
+            "GO_BUILD_FLAGS": "-ldflags '-s -w'"
+        }
+    }
+}
