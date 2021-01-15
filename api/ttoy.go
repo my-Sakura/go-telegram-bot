@@ -12,7 +12,7 @@ import (
 )
 
 func init() {
-	token := "1574524831:AAEcjMbq_hKCyVlJtY9Qd4I29Wq0WLBOUSw"
+	token := os.GetEnv("telegramToken")
 	var bot, _ = tgbotapi.NewBotAPI(token)
 
 	link := "go-telegram-bot.my-sakura.vercel.app/"
@@ -42,7 +42,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	content := update.Data
-	yuqueToken := "YLN7hYz4iKmWSs1MfyLDrNY2IqZaM2ZabOOmpIAX"
+	yuqueToken := os.GetEnv("yuqueToken")
 	namespace := "my-sakura/telegram"
 	slug := "economistFifty"
 	doc := api.GetDocumentInfo(yuqueToken, namespace, slug)
